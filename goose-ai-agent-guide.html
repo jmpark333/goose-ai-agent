@@ -105,53 +105,30 @@
 
 <h2 id="installation" data-ke-size="size23"><b>📥 goose 설치 방법</b></h2>
 
-<p data-ke-size="size16">goose는 운영체제별로 다양한 설치 방법을 제공합니다. 본인의 환경에 맞는 방법을 선택하세요.</p>
+<p data-ke-size="size16">goose는 <b>데스크톱 앱</b>과 <b>CLI</b> 두 가지 방식으로 사용할 수 있습니다. 운영체제별로 설치 방법을 안내합니다.</p>
 
-<h3 id="desktop-install" data-ke-size="size20"><b>🖥️ goose 설치 방법</b></h3>
-
-<p data-ke-size="size16">goose는 데스크톱 앱과 CLI 인터페이스를 모두 제공하며, <b>동일한 설치 파일로 두 가지 방식 모두 사용</b>할 수 있습니다.</p>
-
-<div class="info">
-<h4 data-ke-size="size18"><b>📌 지원 운영체제</b></h4>
-<ul data-ke-list-type="disc">
-<li><b>macOS</b>: Intel 및 Apple Silicon(M1/M2/M3) 모두 지원</li>
-<li><b>Linux</b>: Ubuntu, Debian 등 주요 리눅스 배포판</li>
-<li><b>Windows</b>: Windows 10/11 지원</li>
-</ul>
-</div>
+<h3 id="macos-desktop" data-ke-size="size20"><b>🍎 macOS 데스크톱 앱 설치</b></h3>
 
 <p data-ke-size="size16"><b>방법 1: 다운로드 후 실행</b></p>
 
 <ol data-ke-list-type="decimal">
-<li data-ke-size="size16">goose 공식 웹사이트에서 최신 버전 다운로드</li>
+<li data-ke-size="size16">goose 공식 웹사이트에서 macOS용 최신 버전 다운로드</li>
 <li data-ke-size="size16">다운로드한 zip 파일 압축 해제</li>
-<li data-ke-size="size16">실행 파일을 더블 클릭하여 goose 앱 실행</li>
+<li data-ke-size="size16">실행 파일을 더블 클릭하여 goose 데스크톱 앱 실행</li>
 </ol>
 
-<p data-ke-size="size16"><b>방법 2: Homebrew 사용 (macOS)</b></p>
+<p data-ke-size="size16"><b>방법 2: Homebrew 사용</b></p>
 
 <p data-ke-size="size16">Homebrew를 사용하면 업데이트 관리도 편리합니다.</p>
 <div class="code-block">
-<pre class="bash"><code># Homebrew Cask를 사용한 설치
-brew install --cask block-goose</code></pre>
+<pre class="bash"><code>brew install --cask block-goose</code></pre>
 </div>
 
-<p data-ke-size="size16"><b>방법 3: Linux 데스크톱 앱 설치</b></p>
+<h3 id="macos-cli" data-ke-size="size20"><b>🍎 macOS CLI 설치</b></h3>
 
-<p data-ke-size="size16">Linux에서는 <b>.deb 파일</b>을 다운로드하여 설치할 수 있습니다.</p>
+<p data-ke-size="size16"><b>방법: 설치 스크립트</b></p>
 
-<div class="info">
-<h4 data-ke-size="size18"><b>📌 Linux 설치 방법</b></h4>
-<p data-ke-size="size16">Debian/Ubuntu 기반 배포판에서는 다음 명령어로 설치합니다.</p>
-<div class="code-block">
-<pre class="bash"><code># 다운로드한 .deb 파일 설치
-sudo dpkg -i (filename).deb</code></pre>
-</div>
-</div>
-
-<p data-ke-size="size16"><b>방법 4: CLI 설치 스크립트 (macOS/Linux)</b></p>
-
-<p data-ke-size="size16">터미널에서 직접 CLI를 설치할 수 있습니다.</p>
+<p data-ke-size="size16">터미널에서 다음 명령어로 CLI를 설치합니다.</p>
 <div class="code-block">
 <pre class="bash"><code># 자동 설치 스크립트 실행
 curl -fsSL https://github.com/block/goose/releases/download/stable/download_cli.sh | bash</code></pre>
@@ -168,14 +145,92 @@ curl -fsSL https://github.com/block/goose/releases/download/stable/download_cli.
 <pre class="bash"><code>goose update</code></pre>
 </div>
 
-<p data-ke-size="size16"><b>방법 5: Homebrew CLI 설치 (macOS/Linux)</b></p>
+<h3 id="linux-desktop" data-ke-size="size20"><b>🐧 Linux 데스크톱 앱 설치</b></h3>
 
-<p data-ke-size="size16">Homebrew로 CLI만 설치할 수도 있습니다.</p>
+<p data-ke-size="size16"><b>방법 1: 다운로드 후 설치</b></p>
+
+<p data-ke-size="size16">Linux에서는 <b>.deb 파일</b>을 다운로드하여 설치할 수 있습니다.</p>
+
 <div class="code-block">
-<pre class="bash"><code>brew install block-goose-cli</code></pre>
+<pre class="bash"><code># 다운로드한 .deb 파일 설치 (Debian/Ubuntu)
+sudo dpkg -i (filename).deb</code></pre>
 </div>
 
-<p data-ke-size="size16"><b>⚠️ macOS M3 권한 문제 해결</b></p>
+<h3 id="linux-cli" data-ke-size="size20"><b>🐧 Linux CLI 설치</b></h3>
+
+<p data-ke-size="size16"><b>방법: 설치 스크립트</b></p>
+
+<p data-ke-size="size16">터미널에서 다음 명령어로 CLI를 설치합니다.</p>
+<div class="code-block">
+<pre class="bash"><code># 자동 설치 스크립트 실행
+curl -fsSL https://github.com/block/goose/releases/download/stable/download_cli.sh | bash</code></pre>
+</div>
+
+<p data-ke-size="size16">설치 없이 구성만 진행하려면 다음과 같이 실행합니다.</p>
+<div class="code-block">
+<pre class="bash"><code># 구성 없이 설치
+curl -fsSL https://github.com/block/goose/releases/download/stable/download_cli.sh | CONFIGURE=false bash</code></pre>
+</div>
+
+<p data-ke-size="size16">CLI 업데이트는 다음 명령어로 수행합니다.</p>
+<div class="code-block">
+<pre class="bash"><code>goose update</code></pre>
+</div>
+
+<p data-ke-size="size16"><b>⚠️ Linux 의존성 문제 해결</b></p>
+
+<p data-ke-size="size16">다운로드 시 오류가 발생하면 <code>bzip2</code>를 설치해야 할 수 있습니다.</p>
+<div class="code-block">
+<pre class="bash"><code>sudo apt update && sudo apt install bzip2 -y</code></pre>
+</div>
+
+<h3 id="windows-desktop" data-ke-size="size20"><b>🪟 Windows 데스크톱 앱 설치</b></h3>
+
+<p data-ke-size="size16"><b>방법: 다운로드 후 실행</b></p>
+
+<ol data-ke-list-type="decimal">
+<li data-ke-size="size16">goose 공식 웹사이트에서 Windows용 최신 버전 다운로드</li>
+<li data-ke-size="size16">다운로드한 zip 파일 압축 해제</li>
+<li data-ke-size="size16">실행 파일을 더블 클릭하여 goose 데스크톱 앱 실행</li>
+</ol>
+
+<h3 id="windows-cli" data-ke-size="size20"><b>🪟 Windows CLI 설치</b></h3>
+
+<p data-ke-size="size16"><b>방법 1: PowerShell 스크립트</b></p>
+
+<div class="code-block">
+<pre class="powershell"><code># PowerShell 설치 스크립트 다운로드
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/block/goose/main/download_cli.ps1" -OutFile "download_cli.ps1"
+
+# 스크립트 실행
+.\download_cli.ps1</code></pre>
+</div>
+
+<p data-ke-size="size16"><b>방법 2: WSL 사용</b></p>
+
+<p data-ke-size="size16">WSL(Windows Subsystem for Linux) 환경에서 Linux용 설치 스크립트를 실행할 수도 있습니다.</p>
+<div class="code-block">
+<pre class="bash"><code># WSL에서 Linux 설치 스크립트 실행
+curl -fsSL https://github.com/block/goose/releases/download/stable/download_cli.sh | bash</code></pre>
+</div>
+
+<p data-ke-size="size16"><b>⚠️ PATH 설정</b></p>
+
+<p data-ke-size="size16">goose가 PATH에 없다는 경고가 뜨면 PATH에 추가하세요.</p>
+
+<div class="code-block">
+<pre class="powershell"><code># PowerShell 프로필에 경로 추가
+$profilePath = $PROFILE
+if (!(Test-Path $profilePath)) { New-Item -Path $profilePath -ItemType File -Force }
+Add-Content -Path $profilePath -Value '$env:PATH = "$env:USERPROFILE\.local\bin;$env:PATH"'
+
+# 프로필 재로드 또는 PowerShell 재시작
+. $PROFILE</code></pre>
+</div>
+
+<h3 id="troubleshooting" data-ke-size="size20"><b>🔧 문제 해결</b></h3>
+
+<p data-ke-size="size16"><b>macOS M3 권한 문제</b></p>
 
 <p data-ke-size="size16">Mac M3에서 goose 앱 실행 시 창이 나타나지 않는 문제가 발생하면 다음을 확인하세요.</p>
 
