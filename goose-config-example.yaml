@@ -1,0 +1,89 @@
+# goose 설정 예제 (YAML 형식)
+# 이 파일은 goose의 LLM 프로바이더 및 확장 설정을 위한 예제입니다.
+
+# LLM 프로바이더 설정
+providers:
+  # Tetrate Agent Router (추천 - $10 무료 크레딧 제공)
+  tetrate:
+    enabled: true
+    api_key: "your-tetrate-api-key"
+    model: "auto"  # 자동으로 최적 모델 선택
+    max_tokens: 4096
+    temperature: 0.7
+
+  # OpenRouter 설정
+  openrouter:
+    enabled: false
+    api_key: "your-openrouter-api-key"
+    model: "anthropic/claude-3.5-sonnet"
+    max_tokens: 4096
+    temperature: 0.7
+
+  # OpenAI 설정
+  openai:
+    enabled: false
+    api_key: "your-openai-api-key"
+    model: "gpt-4o"
+    max_tokens: 4096
+    temperature: 0.7
+
+  # Anthropic Claude 설정
+  anthropic:
+    enabled: false
+    api_key: "your-anthropic-api-key"
+    model: "claude-3-5-sonnet-20241022"
+    max_tokens: 4096
+    temperature: 0.7
+
+# 확장 프로그램 설정
+extensions:
+  # Computer Controller - 웹 브라우저 자동화
+  computer_controller:
+    enabled: true
+    permissions:
+      - browser_control
+      - web_scraping
+      - file_caching
+
+  # File System - 파일 시스템 직접 접근
+  file_system:
+    enabled: true
+    allowed_paths:
+      - "/home/user/projects"
+      - "/tmp/goose-work"
+
+  # Terminal - 터미널 명령어 실행
+  terminal:
+    enabled: true
+    allowed_commands:
+      - "git"
+      - "npm"
+      - "python"
+      - "pip"
+
+  # GitHub - GitHub 리포지토리 관리
+  github:
+    enabled: false
+    token: "your-github-token"
+    default_repo: "username/repo"
+
+# 세션 설정
+session:
+  auto_save: true
+  save_path: "./goose-sessions"
+  max_history: 100
+  context_window: 32000
+
+# 보안 설정
+security:
+  confirm_dangerous_operations: true
+  sandbox_mode: false
+  rate_limiting:
+    enabled: true
+    max_requests_per_minute: 60
+
+# 로깅 설정
+logging:
+  level: "info"  # debug, info, warn, error
+  file: "./goose.log"
+  console: true

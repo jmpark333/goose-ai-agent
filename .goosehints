@@ -1,0 +1,90 @@
+# goose 힌트 파일 (.goosehints)
+# 이 파일은 goose에게 프로젝트에 대한 컨텍스트와 지침을 제공합니다.
+
+# 프로젝트 정보
+project:
+  name: "AI 코딩 에이전트 가이드"
+  description: "goose AI 코딩 에이전트 사용법을 안내하는 블로그 프로젝트"
+  language: "korean"
+  tech_stack:
+    - "HTML"
+    - "CSS"
+    - "JavaScript"
+
+# 코딩 스타일 가이드
+coding_style:
+  indentation: 2 spaces
+  line_length: 100
+  naming_convention: "snake_case"  # 또는 camelCase
+  docstring_style: "google"  # Python docstring 스타일
+
+# 프롬프트 작성 가이드
+prompt_guidelines:
+  - "항상 명확하고 구체적으로 작성하세요"
+  - "단계별 지시가 포함되면 좋습니다"
+  - "원하는 출력 형식을 명시하세요"
+  - "예시를 제공하면 더 좋은 결과를 얻을 수 있습니다"
+
+# 자주 사용하는 프롬프트 템플릿
+prompt_templates:
+  code_review:
+    - "Review this code for:"
+    - "1. Performance issues"
+    - "2. Security vulnerabilities"
+    - "3. Code quality and maintainability"
+    - "4. Best practices violations"
+
+  refactoring:
+    - "Refactor this code to improve:"
+    - "1. Readability"
+    - "2. Performance"
+    - "3. Maintainability"
+    - "Keep the same functionality"
+
+  testing:
+    - "Write comprehensive tests for this function including:"
+    - "1. Unit tests"
+    - "2. Edge cases"
+    - "3. Error handling"
+    - "Use pytest framework"
+
+# 제약 사항
+constraints:
+  - "외부 API 호출 시 항상 에러 처리를 포함하세요"
+  - "보안에 민감한 정보는 환경 변수로 관리하세요"
+  - "코드는 PEP 8 스타일 가이드를 따르세요"
+  - "함수는 단일 책임 원칙을 따르도록 설계하세요"
+
+# 선호하는 라이브러리와 도구
+preferred_tools:
+  python:
+    - "FastAPI (웹 프레임워크)"
+    - "SQLAlchemy (ORM)"
+    - "pytest (테스트)"
+    - "black (포맷터)"
+    - "ruff (린터)"
+
+  javascript:
+    - "React (프론트엔드)"
+    - "TypeScript (타입 안전성)"
+    - "Vitest (테스트)"
+    - "ESLint + Prettier (포맷터)"
+
+  database:
+    - "PostgreSQL (프로덕션)"
+    - "SQLite (개발)"
+
+# 자동화할 작업 유형
+automation_tasks:
+  - "반복적인 코드 생성"
+  - "테스트 코드 작성"
+  - "문서화"
+  - "코드 리뷰"
+  - "버그 수정"
+
+# 수동 검증이 필요한 작업
+manual_review_required:
+  - "보안 관련 코드"
+  - "데이터베이스 스키마 변경"
+  - "API 엔드포인트 설계"
+  - "성능 최적화 결정"
